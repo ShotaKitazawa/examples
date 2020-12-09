@@ -11,11 +11,11 @@ spec:
           replicas: 60%
       - name: WAIT
         with:
-          duration: 300s
+          duration: 60s
       # Update the workload of PRIMARY variant to the new version.
       - name: K8S_PRIMARY_ROLLOUT
       - name: WAIT
         with:
-          duration: 300s
+          duration: 60s
       # Destroy all workloads of CANARY variant.
       - name: K8S_CANARY_CLEAN
