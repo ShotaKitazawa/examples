@@ -6,16 +6,16 @@ spec:
     stages:
       # Deploy the workloads of CANARY variant. In this case, the number of
       # workload replicas of CANARY variant is 10% of the replicas number of PRIMARY variant.
-      - name: K8S_CANARY_ROLLOUT
-        with:
-          replicas: 10%
+      #- name: K8S_CANARY_ROLLOUT
+      #  with:
+      #    replicas: 10%
       - name: WAIT
         with:
           duration: 300s
-      # Update the workload of PRIMARY variant to the new version.
-      - name: K8S_PRIMARY_ROLLOUT
-      - name: WAIT
-        with:
-          duration: 300s
-      # Destroy all workloads of CANARY variant.
-      - name: K8S_CANARY_CLEAN
+      ## Update the workload of PRIMARY variant to the new version.
+      #- name: K8S_PRIMARY_ROLLOUT
+      #- name: WAIT
+      #  with:
+      #    duration: 300s
+      ## Destroy all workloads of CANARY variant.
+      #- name: K8S_CANARY_CLEAN
